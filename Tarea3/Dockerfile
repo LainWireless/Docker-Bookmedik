@@ -1,6 +1,6 @@
 FROM php:7.4-apache-bullseye
 MAINTAINER Iván Piña Castillo "ivanpicas88@gmail.com"
-RUN apt-get update && apt-get upgrade -y && docker-php-ext-install mysqli pdo pdo_mysql && apt-get install mariadb-client -y && apt-get clean && rm -rf /var/lib/apt/lists/*
+RUN apt update && apt upgrade -y && docker-php-ext-install mysqli pdo pdo_mysql && apt install mariadb-client -y && apt clean && rm -rf /var/lib/apt/lists/*
 ADD bookmedik /var/www/html/
 ADD script.sh /opt/
 RUN chmod +x /opt/script.sh
